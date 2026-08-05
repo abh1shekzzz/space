@@ -1,23 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>my chaotic site</title>
+  <title>my site</title>
+
   <style>
     body {
-      background: white;
       font-family: monospace;
-      text-align: center;
+      background: white;
     }
 
     .random {
       position: absolute;
-      font-size: 20px;
-    }
-
-    button {
-      margin-top: 20px;
-      padding: 10px;
-      cursor: pointer;
+      font-size: 18px;
     }
   </style>
 </head>
@@ -25,19 +19,21 @@
 <body>
 
 <h1>hi</h1>
-<p>u r lazy</p>
-<p>i like math</p>
 
-<button onclick="changeText()">click me</button>
+<p class="random" style="top: 50px; left: 100px;">u r lazy</p>
+<p class="random" style="top: 200px; left: 300px;">i like math</p>
+<p class="random" style="top: 400px; left: 150px;">go study</p>
 
-<p id="text">hello</p>
+<button onclick="randomText()">click me</button>
+
+<p id="output"></p>
 
 <script>
-  function changeText() {
-    const messages = ["poggers", "lfg", "go study", "why u here"];
-    const random = messages[Math.floor(Math.random() * messages.length)];
-    document.getElementById("text").innerText = random;
-  }
+function randomText() {
+  const messages = ["lfg", "touch grass", "build something"];
+  const random = messages[Math.floor(Math.random() * messages.length)];
+  document.getElementById("output").innerText = random;
+}
 </script>
 
 </body>

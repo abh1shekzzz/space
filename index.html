@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>my chaotic site</title>
+  <style>
+    body {
+      background: white;
+      font-family: monospace;
+      text-align: center;
+    }
+
+    .random {
+      position: absolute;
+      font-size: 20px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>hi</h1>
+<p>u r lazy</p>
+<p>i like math</p>
+
+<button onclick="changeText()">click me</button>
+
+<p id="text">hello</p>
+
+<script>
+  function changeText() {
+    const messages = ["poggers", "lfg", "go study", "why u here"];
+    const random = messages[Math.floor(Math.random() * messages.length)];
+    document.getElementById("text").innerText = random;
+  }
+</script>
+
+</body>
+</html>

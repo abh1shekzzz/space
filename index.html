@@ -1,36 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>my site</title>
-
-  <style>
-    body {
-      font-family: monospace;
-      background: white;
-    }
-
-    .random {
-      position: absolute;
-      font-size: 18px;
-    }
-  </style>
+  <title>chaotic site</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>hi</h1>
+<h1 class="title">hi</h1>
 
-<p class="random" style="top: 50px; left: 100px;">u r lazy</p>
-<p class="random" style="top: 200px; left: 300px;">i like math</p>
-<p class="random" style="top: 400px; left: 150px;">go study</p>
+<!-- random chaotic text -->
+<p class="random" style="top: 60px; left: 40px;">u r lazy</p>
+<p class="random" style="top: 120px; left: 500px;">i like math</p>
+<p class="random" style="top: 200px; left: 200px;">wake up</p>
+<p class="random" style="top: 300px; left: 800px;">touch grass</p>
+<p class="random" style="top: 450px; left: 100px;">build something</p>
+<p class="random" style="top: 520px; left: 600px;">discipline > motivation</p>
+<p class="random" style="top: 150px; left: 900px;">why are you here</p>
+<p class="random" style="top: 350px; left: 400px;">stop scrolling</p>
 
-<button onclick="randomText()">click me</button>
-
+<!-- main button -->
+<button class="main-btn" onclick="randomText()">click me</button>
 <p id="output"></p>
+
+<!-- extra button -->
+<button class="warn-btn" onclick="alert('go study')">don't click</button>
 
 <script>
 function randomText() {
-  const messages = ["lfg", "touch grass", "build something"];
+  const messages = [
+    "focus",
+    "you got this",
+    "code more",
+    "no excuses",
+    "start now",
+    "keep going",
+    "lfg"
+  ];
+
   const random = messages[Math.floor(Math.random() * messages.length)];
   document.getElementById("output").innerText = random;
 }
